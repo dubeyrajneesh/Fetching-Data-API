@@ -1,6 +1,4 @@
 const getposts= () =>{
-
-
     let fetchposts= fetch("https://jsonplaceholder.typicode.com/posts") ;
      let allposttitle = '' ;
 
@@ -14,14 +12,10 @@ const getposts= () =>{
             let post = jsonData[i] ;
             //debugger ;
             //console.log(post.title) ;
-            allposttitle = allposttitle + ` post title : ${post.title} <br> | <hr>` ;
+            allposttitle = allposttitle + `<strong> post title :</strong> ${post.title} <br> <strong> Post body: </strong> ${post.body} <br><hr>` ;
         }
         document.querySelector("#allPosts").innerHTML= allposttitle ;
-
-
      }) ;
-
-
 
      }) ;
 }
